@@ -5,8 +5,8 @@ client_route = Blueprint('cliente', __name__)
 
 
 @client_route.route('/')
-def client_list():
-   return render_template('list_clients.html', clients=CLIENTS)
+def list_client():
+   return render_template('list_clients.html', clientes=CLIENTS)
 
 
 @client_route.route('/', methods=['POST'])

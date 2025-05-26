@@ -9,12 +9,10 @@
   </thead>
   <tbody>
 
-    {% for client in clients %}
+    {% for cliente in clientes %}
         <tr>
-            <th scope="row">{{ client_id }}</th>
-            <td>client.name</td>
-            <td>client.email</td>
-            <td>
+            <th scope="row">{{ cliente.id }}</th>
+            <td>{{ cliente.nome }}</td>  <td>{{ cliente.email }}</td> <td>
                 <button type="button" class="btn btn-primary">Editar</button>
                 <button type="button" class="btn btn-danger">Deletar</button>
             </td>
