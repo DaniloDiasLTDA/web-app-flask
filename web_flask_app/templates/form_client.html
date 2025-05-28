@@ -1,7 +1,7 @@
 <form class="c-form" 
         action="{{ url_for('cliente.insert_client') }}" 
         method="POST"
-        c-append="#client_list">
+        c-append="#lista-clientes">
 
   <div class="mb-3">
     <label class="form-label">Nome</label>
@@ -10,11 +10,11 @@
 
 
    <div class="mb-3">
-    <label id="label-target" class="form-label">Email</label>
+    <label class="form-label">Email</label>
     <input type="text" class="form-control" name="email">
   </div>
 
 
   <button type="submit" class="btn btn-primary">Adicionar cliente</button>
 
-</form>
+</form> 
