@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template
+from flask import Blueprint, render_template, request
 from data.client_data import CLIENTS
 
 client_route = Blueprint('cliente', __name__)
@@ -11,7 +11,9 @@ def list_client():
 
 @client_route.route('/', methods=['POST'])
 def insert_client():
-    pass
+
+    print(request.json)
+    return {'ok': 'ok'}
 
 
 @client_route.route('/new')
