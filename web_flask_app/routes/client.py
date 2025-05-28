@@ -12,8 +12,17 @@ def list_client():
 @client_route.route('/', methods=['POST'])
 def insert_client():
 
-    print(request.json)
-    return {'ok': 'ok'}
+    data = request.json
+
+    new_user = {
+        "id":len(CLIENTS) + 1,
+        "name": data['nome'],
+        "email": data['email'],
+    }
+
+    CLIENTS.append(new_user)
+
+    return render_template('item_client.html', cliente=new_user)
 
 
 @client_route.route('/new')
