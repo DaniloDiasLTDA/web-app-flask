@@ -30,21 +30,21 @@ def customer_form():
     return render_template('form_client.html')
 
 
-@client_route.route('/<id>:client_id')
+@client_route.route('/<int:client_id>')
 def client_info(client_id):
     return render_template('info_client.html')
 
 
-@client_route.route('/<id>:client_id/edit')
+@client_route.route('/<int:client_id>/edit')
 def form_edit_client(client_id):
     return render_template('form_edit_client.html')
 
 
-@client_route.route('/<id>:client_id/update', methods=['PUT'])
+@client_route.route('/<int:client_id>/update', methods=['PUT'])
 def update_client(client_id):
     pass
 
 
-@client_route.route('/<id>:client_id/delete', methods=['DELETE'])
+@client_route.route('/<int:client_id>/delete', methods=['DELETE'])
 def delete_client(client_id):
     pass
