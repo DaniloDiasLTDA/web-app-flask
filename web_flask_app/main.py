@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 
 app.register_blueprint(home_route)
-app.register_blueprint(client_route,url_prefix='/clients')
+app.register_blueprint(client_route,url_prefix='/clientes')
 
-
+ 
 app.run(debug=True)
